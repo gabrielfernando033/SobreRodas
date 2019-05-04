@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.sobrerodas.activities.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <fragment
+        android:id="@+id/container"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <FrameLayout
+        android:id="@+id/barRotas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/background"
+        android:padding="0dp">
+
+        <ImageButton
+            android:id="@+id/btnRotasBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="12dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_arrow_back"
+            tools:ignore="VectorDrawableCompat" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteOrigem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="70dp"
+            android:ems="10"
+            android:hint="Origem"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/background_light" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="Destino"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/background_light" />
+
+        <ImageButton
+            android:id="@+id/btnCalcularRotas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="24dp"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_btn_rotas_calcular" />
+
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCadastrar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_btn_back"/>
+
+    <ImageButton
+        android:id="@+id/btnLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:layout_marginStart="14dp"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_btn_location" />
+
+    <ImageButton
+        android:id="@+id/btnMaisZoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="14dp"
+        android:layout_alignParentEnd="true"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_btn_maiszoom" />
+
+    <ImageButton
+        android:id="@+id/btnMenosZoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="14dp"
+        android:layout_alignParentEnd="true"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_btn_menoszoom" />
+
+    <ImageButton
+        android:id="@+id/btnConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/barRotas"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_btn_confirmar" />
+
+    <ImageButton
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/btnConfirmar"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_btn_cadastrar" />
+
+    <ImageButton
+        android:id="@+id/btnRotas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/btnCadastrar"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="6dp"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_btn_rotas" />
+
+    <ImageButton
+        android:id="@+id/btnAlinharNorte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnBack"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_btn_alinharnorte" />
+
+</RelativeLayout>

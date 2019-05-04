@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.com.sobrerodas.activities.VisualizarActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarVisualizar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorCadastrar"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ImageView
+        android:id="@+id/imageViewVisualizar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="0"
+        android:adjustViewBounds="false"
+        android:background="@color/com_facebook_button_border_color_focused"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/ic_broken_image"
+        tools:ignore="VectorDrawableCompat" />
+
+    <LinearLayout
+        android:id="@+id/linlayoutVisualizarCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:background="@color/colorVisualizarCategoriaPonto">
+
+        <TextView
+            android:id="@+id/txtViewVisualizarCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_warning"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Ausência de elevador"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linlayoutVisualizarTemporario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@color/colorVisualizarTemporario">
+
+        <TextView
+            android:id="@+id/txtViewVisualizarTemporario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_timer"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Problema temporário"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtViewVisualizarDescricaoTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="0"
+        android:text="Descrição:"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtViewVisualizarDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="0"
+        android:scrollbars="vertical"
+        android:text=""
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/linlayoutVisualizarBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linlayoutVisualizarContadores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="0"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtViewErrado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txtViewCorreto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryLight" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linlayoutVisualizarBotoes"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="0"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnErrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:drawableStart="@drawable/ic_close"
+                android:text="Lugar errado"
+                android:textColor="@android:color/background_light" />
+
+            <Button
+                android:id="@+id/btnCorreto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryLight"
+                android:drawableStart="@drawable/ic_check"
+                android:text="Lugar correto"
+                android:textColor="@android:color/background_light" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRemoverLocal"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_delete"
+            android:text="Remover local"
+            android:textColor="@color/colorVisualizarTextoBotaoRemover" />
+
+    </LinearLayout>
+
+</LinearLayout>

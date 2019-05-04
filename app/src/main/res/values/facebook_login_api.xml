@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_app_id1">YOUR_FACEBOOK_APP_IP_HERE</string>
+    <string name="fb_login_protocol_scheme1">YOUR_FACEBOOK_PROTOCOL_SCHEME_HERE</string>
+</resources>

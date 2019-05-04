@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#41A83E</color>
+    <color name="colorPrimaryDark">#2D712B</color>
+    <color name="colorPrimaryLight">#1db11a</color>
+    <color name="colorSecondary">#3C9D39</color>
+    <color name="colorSecondaryDark">#348932</color>
+    <color name="colorSecondaryLight">#52BF4F</color>
+    <color name="colorAccent">#e1301c</color>
+    <color name="colorCadastrar">#E74C3C</color>
+    <color name="colorPlace">#4b4b4b</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDotsSelected">#88D286</color>
+    <color name="colorDotsTransparent">#338631</color>
+    <color name="colorBtLogout">#004020</color>
+    <color name="colorVisualizarCategoriaPonto">#E74C3C</color>
+    <color name="colorVisualizarTemporario">#F39F43</color>
+    <color name="colorVisualizarTextoBotaoRemover">#999999</color>
+    <!-- Dots inactive colors -->
+    <color name="dot_inactive_screen1">#338631</color>
+    <color name="dot_inactive_screen2">#338631</color>
+    <color name="dot_inactive_screen3">#338631</color>
+    <!-- Dots active colors -->
+    <color name="dot_active_screen1">#88D286</color>
+    <color name="dot_active_screen2">#88D286</color>
+    <color name="dot_active_screen3">#88D286</color>
+    <array name="array_dot_active">
+        <item>@color/dot_active_screen1</item>
+        <item>@color/dot_active_screen2</item>
+        <item>@color/dot_active_screen3</item>
+        <item>@color/dot_active_screen3</item>
+    </array>
+    <array name="array_dot_inactive">
+        <item>@color/dot_inactive_screen1</item>
+        <item>@color/dot_inactive_screen2</item>
+        <item>@color/dot_inactive_screen3</item>
+        <item>@color/dot_inactive_screen3</item>
+    </array>
+</resources>

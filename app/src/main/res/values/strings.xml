@@ -1,0 +1,13 @@
+<resources>
+    <string name="facebook_app_id">@string/facebook_app_id1</string>
+    <string name="fb_login_protocol_scheme">@string/fb_login_protocol_scheme1</string>
+    <string name="app_name">Sobre Rodas</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="spinner_title">Selecione um item</string>
+    <string name="tutorial1">TUTORIAL1</string>
+    <string name="tutorial2">TUTORIAL2</string>
+    <string name="tutorial3">TUTORIAL3</string>
+    <string name="tutorial4">TUTORIAL4</string>
+</resources>
