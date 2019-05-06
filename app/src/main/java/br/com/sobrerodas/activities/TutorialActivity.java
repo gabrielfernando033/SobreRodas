@@ -111,7 +111,11 @@ public class TutorialActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-        startActivity(new Intent(TutorialActivity.this, MainActivity.class));
+        boolean isFirstRun = getIntent().hasExtra("isFirstRun") ? getIntent().getExtras().getBoolean("isFirstRun") : false;
+        if (isFirstRun)
+        {
+            startActivity(new Intent(TutorialActivity.this, MainActivity.class));
+        }
         finish();
     }
 

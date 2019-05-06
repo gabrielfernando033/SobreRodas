@@ -32,6 +32,7 @@ public class SplashActivity extends AppCompatActivity {
                 {
                     prefs.edit().putBoolean("SobreRodasFirstRun", false).commit();
                     Intent intent = new Intent(getApplicationContext(), TutorialActivity.class);
+                    intent.putExtra("isFirstRun", true);
                     startActivity(intent);
                     finish();
                 }
