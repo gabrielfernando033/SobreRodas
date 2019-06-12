@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -41,6 +42,7 @@ public class VisualizarActivity extends AppCompatActivity {
     // Interface
     private Toolbar toolbar;
     private ImageView imageViewVisualizar;
+    private TextView txtViewLoading;
     private TextView txtViewCategoria;
     private TextView txtViewDescricao;
     private TextView txtViewErrado;
@@ -77,6 +79,7 @@ public class VisualizarActivity extends AppCompatActivity {
     private void initializeComponents() {
         toolbar = (Toolbar) findViewById(R.id.toolbarVisualizar);
         imageViewVisualizar = (ImageView) findViewById(R.id.imageViewVisualizar);
+        txtViewLoading = (TextView) findViewById(R.id.txtViewVisualizarLoading);
         txtViewCategoria = (TextView) findViewById(R.id.txtViewVisualizarCategoria);
         txtViewDescricao = (TextView) findViewById(R.id.txtViewVisualizarDescricao);
         txtViewErrado = (TextView) findViewById(R.id.txtViewErrado);
@@ -329,11 +332,21 @@ public class VisualizarActivity extends AppCompatActivity {
             public void onSuccess(byte[] bytes) {
                 Bitmap bitmap = BitmapFactory.decodeByteArray(bytes , 0, bytes.length);
                 imageViewVisualizar.setImageBitmap(bitmap);
+                txtViewLoading.getLayoutParams().height = 0;
+
+                final float scale = getResources().getDisplayMetrics().density;
+                int height  = (int) (150 * scale);
+                imageViewVisualizar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, height));
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception exception) {
                 imageViewVisualizar.setImageResource(R.drawable.ic_broken_image);
+                txtViewLoading.getLayoutParams().height = 0;
+
+                final float scale = getResources().getDisplayMetrics().density;
+                int height  = (int) (150 * scale);
+                imageViewVisualizar.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, height));
             }
         });
     }
@@ -406,5 +419,4 @@ public class VisualizarActivity extends AppCompatActivity {
         dialog.setNegativeButton("Não", dialogClickListener);
         dialog.show();
     }
-
 }

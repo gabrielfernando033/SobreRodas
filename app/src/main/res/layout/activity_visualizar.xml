@@ -22,13 +22,22 @@
     <ImageView
         android:id="@+id/imageViewVisualizar"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_weight="0"
+        android:layout_height="0dp"
         android:adjustViewBounds="false"
         android:background="@color/com_facebook_button_border_color_focused"
         android:scaleType="centerInside"
         app:srcCompat="@drawable/ic_broken_image"
         tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/txtViewVisualizarLoading"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:text="Loading..."
+        android:textAlignment="center"
+        android:textSize="22sp" />
 
     <LinearLayout
         android:id="@+id/linlayoutVisualizarCategoria"
